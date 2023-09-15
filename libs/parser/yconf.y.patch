@@ -1,15 +1,14 @@
 --- a/libs/parser/yconf.y	2012-01-12 22:37:17.582339777 +0100
 +++ b/libs/parser/yconf.y	2012-03-03 23:55:29.889737630 +0100
-@@ -127,7 +127,8 @@
- 	 * later regardless of whether it comes from the 'prompt' in
- 	 * mainmenu_stmt or here
- 	 */
--	menu_add_prompt(P_MENU, xstrdup("Linux Kernel Configuration"), NULL);
-+	menu_add_prompt(P_MENU, xstrdup(ROOTMENU), NULL);
-+
- };
+@@ -550,7 +550,7 @@
  
+ 	if (!menu_has_prompt(&rootmenu)) {
+ 		current_entry = &rootmenu;
+-		menu_add_prompt(P_MENU, "Main menu", NULL);
++		menu_add_prompt(P_MENU, ROOTMENU, NULL);
+ 	}
  
+ 	menu_finalize(&rootmenu);
 @@ -746,7 +746,7 @@
  	}
  }
