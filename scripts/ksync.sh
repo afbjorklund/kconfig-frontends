@@ -44,21 +44,31 @@ printf "%d.%d.%d%s %s %s\n%s\n"             \
 
 # Sync-up the files
 k_files=""
+d_files=""
 while read k_file trash kf_file; do
     k_files="${k_files} ${k_file}"
     mkdir -p "${kf_file%/*}"
-    cp -v "${k_dir}/${k_file}" "${kf_file}"
+    if [ -f "${k_dir}/${k_file}" ]; then
+      cp -v "${k_dir}/${k_file}" "${kf_file}"
+    else
+      test -f "${kf_file}" && rm -v "${kf_file}"
+      test -f "${kf_file}.patch" && rm -v "${kf_file}.patch"
+      d_files="${d_files} ${k_file}"
+    fi
     if [ -f "${kf_file}.patch" ]; then
-        patch --no-backup-if-mismatch -g0 -F1 -p1 -f <"${kf_file}.patch"
+        patch --no-backup-if-mismatch -g0 -F1 -p1 -f <"${kf_file}.patch" || :
     fi
 done <scripts/ksync.list
+for d_file in ${d_files}; do
+    sed -e "\|${d_file}|d" -i scripts/ksync.list
+done
 
 # Save the changelog between the old cset and now
 printf "Synced-up these changes:\n"
 ( cd "${k_dir}"
   git log --no-merges --pretty='tformat:%h %s'  \
     "${k_cset_old}..${k_cset}"                  \
-    ${k_files}                                  \
+    -- ${k_files}                               \
 )|tac                                           \
  |tee -a "scripts/ksync.log"                    \
  |sed -e 's/^/    /;'
