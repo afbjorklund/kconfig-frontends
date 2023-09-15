@@ -20,7 +20,8 @@ fi
 k_cset_old=$( head -n 1 .version |awk '{ print $(2); }' )
 
 # Get the kernel version
-eval $( head -n 5 "${k_dir}/Makefile"                       \
+eval $( grep -v 'SPDX-License-Identifier' "${k_dir}/Makefile" \
+        |head -n 5                                            \
         |sed -e 's/^/K_/; s/"//g; s/ = \{0,1\}/="/; s/$/"/;'  \
       )
 k_cset="$( cd "${k_dir}";                   \
