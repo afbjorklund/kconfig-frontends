@@ -225,37 +225,6 @@ AS_IF(
 AC_SUBST([AM_YFLAGS], ["-t -l -p zconf"])
 
 #----------------------------------------
-# Check for gettext, for the kconfig frontends
-[has_gettext="$enable_L10n"]
-AS_IF(
-    [test "$has_gettext" = "yes"],
-    [AC_CHECK_HEADERS(
-        [libintl.h],
-        [ac_ct_gettext_hdr=$ac_header; break],
-        [has_gettext=no])])
-AS_IF(
-    [test "$has_gettext" = "yes"],
-    [AC_CHECK_DECL(
-        [gettext],,
-        [has_gettext=no],
-        [#include <$ac_ct_gettext_hdr>])])
-AS_IF(
-    [test "$has_gettext" = "yes"],
-    [LIBS_old="$LIBS"
-     LIBS=
-     AC_SEARCH_LIBS(
-        [gettext],
-        [intl],,
-        [has_gettext=no])
-    intl_LIBS="$LIBS"
-    LIBS="$LIBS_old"])
-AS_IF(
-    [test "$has_gettext" = "no"],
-    [intl_CPPFLAGS=-DKBUILD_NO_NLS])
-AC_SUBST([intl_CPPFLAGS])
-AC_SUBST([intl_LIBS])
-
-#----------------------------------------
 # Check for ncurses, for the mconf & nconf frontends
 AS_IF(
     [test "$need_curses" = "yes" -o "$need_curses" = "auto"],
@@ -448,9 +417,6 @@ AM_CONDITIONAL(
 AM_CONDITIONAL(
     [COND_utils],
     [test "$enable_utils" = "yes"])
-AM_CONDITIONAL(
-    [COND_utils_gettext],
-    [test "$has_gettext" = "yes"])
 
 #----------------------------------------
 # Get the version to apply to the parser shared library
@@ -471,7 +437,6 @@ AS_IF([test "$enable_qconf" = "yes"], [fe_list="$fe_list qconf"])
 
 [kcfg_list="$fe_list"]
 AS_IF([test "$enable_utils" = "yes"], [kcfg_list="$kcfg_list diff merge tweak"])
-AS_IF([test "$has_gettext" = "yes"],  [kcfg_list="$kcfg_list gettext"])
 AC_SUBST([kcfg_list], [${kcfg_list}])
 
 AS_IF([test "$enable_kconfig" = "yes"], [fe_list=" kconfig$fe_list"])
@@ -503,6 +468,5 @@ AC_MSG_NOTICE([- parser library     :$lib_list])
 AC_MSG_NOTICE([  - root-menu prompt : $root_menu])
 AC_MSG_NOTICE([  - config prefix    : $config_prefix])
 AC_MSG_NOTICE([- frontends          :$fe_list])
-AC_MSG_NOTICE([  - localised        : $has_gettext])
 AC_MSG_NOTICE([- install utilities  : $enable_utils])
 AC_MSG_NOTICE([- CFLAGS CXXFLAGS    : $wall_CFLAGS $werror_CFLAGS])

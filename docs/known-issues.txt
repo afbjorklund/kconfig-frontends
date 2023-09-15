@@ -15,24 +15,6 @@ You have to explicitly disable nconf at ./configure time:
 
 ----------------------------------------
 
-Under Cygwin, gettext is not in the C library, but in an external libintl,
-so it must be explicitly linked in. The packaging does check this situation,
-and correctly link against libintl. libintl depends on some other libraries
-(libncursesw and libiconv). Simply linking against libintl does pull the
-dependencies in.
-
-However, at least libiconv is not installed by default, even if the devel
-libintl package is installed. This is considered a bug in the Cygwin
-installation mechanism.
-
-To fix it, re-run the Cygwin install process, and expressly select:
-  - Devel/libiconv
-
-(and say 'yes' if you are prompted for required packages), and re-build
-(no need to re-run .configure).
-
-----------------------------------------
-
 Under Cygwin, gtk+2.0 depends on:
   - libglitz
   - libxcb-render-util

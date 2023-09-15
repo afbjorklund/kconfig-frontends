@@ -321,22 +321,6 @@ if COND_utils
 bin_SCRIPTS += utils/kconfig-tweak
 dist_bin_SCRIPTS += utils/kconfig-diff utils/kconfig-merge
 
-if COND_utils_gettext
-MAYBE_utils_gettext = utils/kconfig-gettext
-endif
-bin_PROGRAMS += $(MAYBE_utils_gettext)
-
-utils_kconfig_gettext_SOURCES = utils/gettext.c
-utils_kconfig_gettext_CPPFLAGS = \
-	$(AM_CPPFLAGS) \
-	-I$(top_srcdir)/libs/parser
-utils_kconfig_gettext_CFLAGS = \
-	$(AM_CFLAGS) \
-	$(kf_CFLAGS)
-utils_kconfig_gettext_LDADD = \
-	$(top_builddir)/libs/parser/libkconfig-parser.la \
-	$(intl_LIBS)
-
 CLEANFILES += utils/kconfig-tweak
 EXTRA_DIST += \
 	utils/kconfig-tweak.in \

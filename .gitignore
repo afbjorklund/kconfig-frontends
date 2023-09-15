@@ -23,7 +23,6 @@
 /libs/parser/kconfig-parser.pc
 
 /utils/kconfig-tweak
-/utils/kconfig-gettext
 
 aclocal.m4
 configure
