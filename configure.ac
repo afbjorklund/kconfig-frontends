@@ -225,46 +225,6 @@ AS_IF(
 AC_SUBST([AM_YFLAGS], ["-t -l -p zconf"])
 
 #----------------------------------------
-# Special section to check for gperf.
-AC_CHECK_PROGS(
-    [GPERF],
-    [gperf])
-AS_IF(
-    [test -z "$GPERF"],
-    [AC_MSG_ERROR([can not find gperf])])
-
-# gperf 3.1 generates functions with 'size_t' instead of 'unsigned int'
-AC_MSG_CHECKING([for the type used in gperf declarations])
-GPERF_LEN_TYPE=
-AS_VAR_SET(
-    [GPERF_PROLOG],
-    [`echo foo,bar | ${GPERF} -L ANSI-C`])
-AC_COMPILE_IFELSE(
-    [AC_LANG_PROGRAM(
-        [[
-        #include <string.h>
-        ${GPERF_PROLOG}
-        const char * in_word_set(const char *, size_t);
-        ]])
-    ],
-    [GPERF_LEN_TYPE='size_t'],
-    [
-    AC_COMPILE_IFELSE(
-        [AC_LANG_PROGRAM(
-            [[
-            #include <string.h>
-            ${GPERF_PROLOG}
-            const char * in_word_set(const char *, unsigned int);
-            ]])
-        ],
-        [GPERF_LEN_TYPE='unsigned int'],
-        [AC_MSG_RESULT([not size_t, not unsigned int. What else?])
-         AC_MSG_FAILURE([unable to detect the type used in gperf declarations])
-        ])])
-AC_MSG_RESULT([${GPERF_LEN_TYPE}])
-AC_SUBST([GPERF_LEN_TYPE])
-
-#----------------------------------------
 # Check for gettext, for the kconfig frontends
 [has_gettext="$enable_L10n"]
 AS_IF(
