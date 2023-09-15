@@ -18,7 +18,6 @@
 
 /libs/images/images.c
 /libs/images/images.h
-/libs/parser/hconf.c
 /libs/parser/lconf.c
 /libs/parser/yconf.c
 /libs/parser/kconfig-parser.pc

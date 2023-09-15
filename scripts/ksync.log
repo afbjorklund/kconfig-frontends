@@ -173,3 +173,4 @@ e039303 xconfig: fix 'Show Debug' functionality
 9be3213 gconfig: remove misleading parentheses around a condition
 6f7da29041 Linux 4.12
 569dbb88e8 Linux 4.13
+bebc6082da Linux 4.14
