@@ -6,7 +6,7 @@
 
 #----------------------------------------
 # Prepare autoconf
-AC_PREREQ([2.67])
+AC_PREREQ([2.69])
 AC_INIT(
     [kconfig-frontends],
     [m4_esyscmd_s([./scripts/version.sh])],
@@ -207,7 +207,7 @@ AS_IF(
     [test "$need_pkgconfig" = "yes"],
     [PKG_PROG_PKG_CONFIG()])
 # Look for `lex'. If it cannot be found, autoconf sets $LEX to ':'.
-AC_PROG_LEX
+AC_PROG_LEX([noyywrap])
 AS_IF(
     [test "$LEX" = ":"],
     [AC_MSG_ERROR([can not find a lexer generator (such as lex or flex)])])
