@@ -171,11 +171,110 @@ cfd7c612 kconfig-language: improve menuconfig usage description
 e039303 xconfig: fix 'Show Debug' functionality
 83c3a1b xconfig: fix missing suboption and help panels on first run
 9be3213 gconfig: remove misleading parentheses around a condition
+a351e9b9fc Linux 4.11
+ad8181060788 kconfig: fix sparse warnings in nconfig
 6f7da29041 Linux 4.12
 569dbb88e8 Linux 4.13
+bb3290d91695 Remove gperf usage from toolchain
+b24413180f56 License cleanup: add SPDX GPL-2.0 license identifier to files with no license
 bebc6082da Linux 4.14
+88127dae6ed9 kconfig/symbol.c: use correct pointer type argument for sizeof
 d8a5b80568 Linux 4.15
+2c37e08464a8 kconfig: Warn if choice default is not in choice
+33ca1a248663 kconfig: Document the 'menu' struct
+52aede4ba5ef kconfig: Document the 'symbol' struct
+b7d4ec395673 Documentation/kbuild: Add guidance for the use of default
+c873443430eb kconfig: Sync zconf.y with zconf.tab.c_shipped
+9a826842ff2f kconfig: Rename menu_check_dep() to rewrite_m()
+fa8cedaef814 kconfig: Clarify expression rewriting
+f77850d3fe0c kconfig: Clean up modules handling and fix crash
+e3b03bf29d6b kconfig: display recursive dependency resolution hint just once
+9059a3493efe kconfig: fix relational operators for bool and tristate symbols
+26e47a3c11a2 kconfig: Don't leak symbol names during parsing
+24161a6711c9 kconfig: Don't leak 'source' filenames during parsing
+bc28fe1d5ede kconfig: Don't leak 'option' arguments during parsing
+0724a7c32a54 kconfig: Don't leak main menus during parsing
+ae7440ef0c80 kconfig: Fix automatic menu creation mem leak
+5b1374b3b3c2 kconfig: Fix expr_free() E_NOT leak
+7cf33f88e294 kconfig: Fix choice symbol expression leak
+05cccce58045 kconfig: Document automatic submenu creation code
+0735f7e5def2 kconfig: Document important expression functions
+df60f4b92d3d kconfig: Remove menu_end_entry()
+b92d804a5179 kconfig: drop 'boolean' keyword
+6479f327dea6 kconfig: Warn if there is more than one help text
+52e58a3caeba kconfig: make input_mode static
+5a3dc717b3c7 kconfig: make xfgets() really static
+84dd95d4f87a kconfig: make conf_unsaved a local variable of conf_read()
+765f4cdef6f8 kconfig: use default 'yy' prefix for lexer and parser
+3e41ba05b6d6 kconfig: Document SYMBOL_OPTIONAL logic
+d3465af60f44 kconfig: Clarify choice dependency propagation
+9d1a9e8bc18b kconfig: Document 'if' flattening logic
+b53688014e33 kconfig: Clarify menu and 'if' dependency propagation
+1ccb27143360 kconfig: make "Selected by:" and "Implied by:" readable
+cedd55d49dee kconfig: Remove silentoldconfig from help and docs; fix kconfig/conf's help
+1b9eda2e4892 kconfig: Warn if help text is blank
+cb67ab2cd2b8 kconfig: do not write choice values when their dependency becomes n
+4f208f392103 kconfig: show '?' prompt even if no help text is available
+d2a04648a5db kconfig: remove check_stdin()
+f3ff6fb5db68 kconfig: echo stdin to stdout if either is redirected
+9e3e10c72536 kconfig: send error messages to stderr
+d717f24d8c68 kconfig: add xrealloc() helper
+523ca58b7db2 kconfig: remove const qualifier from sym_expand_string_value()
+cd81fc82b93f kconfig: add xstrdup() helper
+f4bc1eefc160 kconfig: set SYMBOL_AUTO to the symbol marked with defconfig_list
+bf0bbdcf1003 kconfig: Don't leak choice names during parsing
+5ae6fcc4bb82 kconfig: fix line number in recursive inclusion error message
 0adb32858b Linux 4.16
+9a47ceec543b kconfig: clean-up reverse dependency help implementation
+d9119b5925a0 kconfig: Print reverse dependencies in groups
+f467c5640c29 kconfig: only write '# CONFIG_FOO is not set' for visible symbols
+59a80b5e892d kconfig: do not call check_conf() for olddefconfig
+4bb3a5b085cd kconfig: remove unneeded input_mode test in conf()
+99f0b6578bab kconfig: remove redundant input_mode test for check_conf() loop
+2aad9b896213 kconfig: hide irrelevant sub-menus for oldconfig
+911a91c39cab kconfig: rename silentoldconfig to syncconfig
+f622f8279581 kconfig: warn unmet direct dependency of tristate symbols selected by y
+f8f69dc0b4e0 kconfig: make unmet dependency warnings readable
+26561514cc9d kconfig: do not include both curses.h and ncurses.h for nconfig
+32a94b8b0c3e kconfig: remove duplicated file name and lineno of recursive inclusion
+379a8eb8eb1a kconfig: detect recursive inclusion earlier
+18492685e479 kconfig: use yylineno option instead of manual lineno increments
+17baab68d337 kconfig: extend output of 'listnewconfig'
 29dcea8877 Linux 4.17
+1c5af5cf9308 kconfig: refactor ncurses package checks for building mconf and nconf
+694c49a7c01c kconfig: drop localization support
+104daea149c4 kconfig: reference environment variables directly and remove 'option env='
+bb222ceeb327 kconfig: remove string expansion in file_lookup()
+96d8e48da55a kconfig: remove string expansion for mainmenu after yyparse()
+5b31a9746756 kconfig: remove sym_expand_string_value()
+137c0118a900 kconfig: make default prompt of mainmenu less specific
+9de071536c87 kconfig: begin PARAM state only when seeing a command keyword
+9ced3bddec08 kconfig: support user-defined function and recursively expanded variable
+1175c02506ff kconfig: support simply expanded variable
+ed2a22f277c6 kconfig: support append assignment operator
+82bc8bd82e5c kconfig: expand lefthand side of assignment statement
+2ae89c7a82ea kconfig: Avoid format overflow warning from GCC 8.1
+8373b7d9d174 Documentation: kconfig: add recommended way to describe compiler support
+050e9baa9dc9 Kbuild: rename CC_STACKPROTECTOR[_STRONG] config variables
+b2d00d7c61c8 kconfig: fix line numbers for if-entries in menu tree
+bdb60101df4a kconfig: document Kconfig source file comments
+ecd53ac2f2c6 kconfig: handle P_SYMBOL in print_symbol()
+452d4c867311 kconfig: update user kconfig tools doc.
 94710cac0e Linux 4.18
+693359f7ac90 kconfig: rename SYMBOL_AUTO to SYMBOL_NO_WRITE
+5accd7f3360e kconfig: handle format string before calling conf_message_callback()
+08b220b37ffe kconfig: fix typos in description of "choice" in kconfig-language.txt
+a2ff4040151a kconfig: rename file_write_dep and move it to confdata.c
+0608182ad542 kconfig: split out useful helpers in confdata.c
+79123b1389cc kconfig: create directories needed for syncconfig by itself
+16952b77d8b5 kconfig: make syncconfig update .config regardless of sym_change_count
+00c864f8903d kconfig: allow all config targets to write auto.conf if missing
+56869d45e364 kconfig: fix the rule of mainmenu_stmt symbol
+c151272d1687 kconfig: remove unused sym_get_env_prop() function
+1880861226c1 kconfig: remove P_ENV property type
+f1575595d156 kconfig: error out when seeing recursive dependency
+5e8c5299d315 kconfig: report recursive dependency involving 'imply'
+f498926c47aa kconfig: improve the recursive dependency report
+9a9ddcf47831 kconfig: suppress "configuration written to .config" for syncconfig
+bc8d2e20a3eb kconfig: remove a spurious self-assignment
 84df9525b0 Linux 4.19
