@@ -172,6 +172,11 @@ frontends/kconfig: frontends/kconfig.in
 
 EXTRA_DIST += frontends/kconfig.in
 
+BUILT_SOURCES += \
+	frontends/kconfig
+CLEANFILES += \
+	frontends/kconfig
+
 endif # COND_kconfig
 
 #--------------------------
