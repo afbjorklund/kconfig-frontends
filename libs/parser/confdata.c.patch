@@ -1,0 +1,13 @@
+--- a/libs/parser/confdata.c	2023-09-17 10:11:18.144446405 +0200
++++ b/libs/parser/confdata.c	2023-09-17 11:57:51.653521174 +0200
+@@ -1021,6 +1021,10 @@
+ 	FILE *out, *tristate, *out_h;
+ 	int i;
+ 
++	name = getenv("KCONFIG_SYNCCONFIG");
++	if (!overwrite && (!name || !*name))
++		return 0;
++
+ 	if (!overwrite && is_present(autoconf_name))
+ 		return 0;
+ 

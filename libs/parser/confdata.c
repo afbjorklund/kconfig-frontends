@@ -1021,6 +1021,10 @@ int conf_write_autoconf(int overwrite)
 	FILE *out, *tristate, *out_h;
 	int i;
 
+	name = getenv("KCONFIG_SYNCCONFIG");
+	if (!overwrite && (!name || !*name))
+		return 0;
+
 	if (!overwrite && is_present(autoconf_name))
 		return 0;
 
