@@ -278,3 +278,7 @@ f498926c47aa kconfig: improve the recursive dependency report
 9a9ddcf47831 kconfig: suppress "configuration written to .config" for syncconfig
 bc8d2e20a3eb kconfig: remove a spurious self-assignment
 84df9525b0 Linux 4.19
+04c459d20448 kconfig: remove oldnoconfig target
+2cd3faf87d2d merge_config.sh: Allow to define config prefix
+6bbe4385d035 kconfig: merge_config: avoid false positive matches from comment lines
+8fe28cb58bcb Linux 4.20
