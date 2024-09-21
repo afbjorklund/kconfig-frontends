@@ -66,9 +66,13 @@ done
 # Save the changelog between the old cset and now
 printf "Synced-up these changes:\n"
 ( cd "${k_dir}"
+  test "${k_cset_old}" != "${k_cset}" &&        \
+  git log -1 --pretty='tformat:%h %s'           \
+    "${k_cset}"                                 \
+    --
   git log --no-merges --pretty='tformat:%h %s'  \
     "${k_cset_old}..${k_cset}"                  \
-    -- ${k_files}                               \
+    -- ${k_files}
 )|tac                                           \
  |tee -a "scripts/ksync.log"                    \
  |sed -e 's/^/    /;'
