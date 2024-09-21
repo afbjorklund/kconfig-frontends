@@ -1,7 +1,7 @@
 diff --git a/utils/kconfig-tweak.in b/utils/kconfig-tweak.in
 --- a/utils/kconfig-tweak.in
 +++ b/utils/kconfig-tweak.in
-@@ -3,8 +3,8 @@
+@@ -4,8 +4,8 @@
  
  myname=${0##*/}
  
@@ -12,7 +12,7 @@ diff --git a/utils/kconfig-tweak.in b/utils/kconfig-tweak.in
  
  usage() {
  	cat >&2 <<EOL
-@@ -41,7 +41,7 @@
+@@ -42,7 +42,7 @@
  By default, $myname will upper-case the given symbol. Use --keep-case to keep
  the case of all following symbols unchanged.
  
