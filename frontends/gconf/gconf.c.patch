@@ -1,7 +1,7 @@
 diff --git a/frontends/gconf/gconf.c b/frontends/gconf/gconf.c
 --- a/frontends/gconf/gconf.c
 +++ b/frontends/gconf/gconf.c
-@@ -1446,7 +1446,7 @@
+@@ -1444,7 +1444,7 @@
  {
  	const char *name;
  	char *env;
@@ -10,7 +10,7 @@ diff --git a/frontends/gconf/gconf.c b/frontends/gconf/gconf.c
  
  	/* GTK stuffs */
  	gtk_set_locale();
-@@ -1456,6 +1458,7 @@
+@@ -1454,6 +1454,7 @@
  	//add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
  	//add_pixmap_directory (PACKAGE_SOURCE_DIR "/pixmaps");
  
@@ -18,7 +18,7 @@ diff --git a/frontends/gconf/gconf.c b/frontends/gconf/gconf.c
  	/* Determine GUI path */
  	env = getenv(SRCTREE);
  	if (env)
-@@ -1464,6 +1467,7 @@
+@@ -1462,6 +1463,7 @@
  		glade_file = g_strconcat(av[0], ".glade", NULL);
  	else
  		glade_file = g_strconcat(g_get_current_dir(), "/", av[0], ".glade", NULL);

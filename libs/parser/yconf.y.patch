@@ -1,6 +1,6 @@
 --- a/libs/parser/yconf.y	2012-01-12 22:37:17.582339777 +0100
 +++ b/libs/parser/yconf.y	2012-03-03 23:55:29.889737630 +0100
-@@ -550,7 +550,7 @@
+@@ -510,7 +510,7 @@
  
  	if (!menu_has_prompt(&rootmenu)) {
  		current_entry = &rootmenu;
@@ -9,12 +9,3 @@
  	}
  
  	menu_finalize(&rootmenu);
-@@ -781,7 +781,7 @@
- 	}
- }
- 
--#include "zconf.lex.c"
-+#include "lconf.c"
- #include "util.c"
- #include "confdata.c"
- #include "expr.c"

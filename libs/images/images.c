@@ -1,7 +1,9 @@
+// SPDX-License-Identifier: GPL-2.0
 /*
  * Copyright (C) 2002 Roman Zippel <zippel@linux-m68k.org>
- * Released under the terms of the GNU GPL v2.0.
  */
+
+#include "images.h"
 
 const char *xpm_load[] = {
 "22 22 5 1",

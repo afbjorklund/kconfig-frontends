@@ -1,0 +1,18 @@
+--- a/libs/parser/lkc.h	2024-09-21 18:32:55.939528260 +0200
++++ b/libs/parser/lkc.h	2024-09-22 08:52:16.911917804 +0200
+@@ -38,6 +38,7 @@
+ 	def_random
+ };
+ 
++#define yylineno zconflineno
+ extern int yylineno;
+ void zconfdump(FILE *out);
+ void zconf_starthelp(void);
+@@ -91,6 +92,7 @@
+ char *xstrndup(const char *s, size_t n);
+ 
+ /* zconf.l */
++#define yylex zconflex
+ int yylex(void);
+ 
+ struct gstr {

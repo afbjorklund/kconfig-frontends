@@ -282,3 +282,42 @@ bc8d2e20a3eb kconfig: remove a spurious self-assignment
 2cd3faf87d2d merge_config.sh: Allow to define config prefix
 6bbe4385d035 kconfig: merge_config: avoid false positive matches from comment lines
 8fe28cb58bcb Linux 4.20
+a9b722847872 scripts/kconfig/merge_config: don't redefine 'y' to 'm'
+75889e9be78f kconfig: remove unneeded setsym label in conf_read_simple()
+0849d212e395 kconfig: rename conf_split_config() to conf_touch_deps()
+1508fec82e39 kconfig: split out code touching a file to conf_touch_dep()
+2aabbed6774f kconfig: remove S_OTHER symbol type and correct dependency tracking
+0cbe3ac439bf kconfig: remove k_invalid from expr_parse_string() return type
+77c1c0fa8b14 kconfig: fix file name and line number of warn_ignored_character()
+fbac5977d81c kconfig: fix memory leak when EOF is encountered in quotation
+413cd19d81fd kconfig: require T_EOL to reduce visible statement
+be3c8075978a kconfig: remove unneeded pattern matching to whitespaces
+21c5ecf60472 kconfig: refactor pattern matching in STRING state
+cc66bca775ee kconfig: fix ambiguous grammar in terms of new lines
+0bcc547ec4b0 kconfig: clean up EOF handling in the lexer
+723679339d08 kconfig: warn no new line at end of file
+6900ae9eeee3 kconfig: remove grammatically ambiguous "unexpected option" diagnostic
+2f60e46e605a kconfig: remove grammatically ambiguous option_error
+4891796c6f83 kconfig: remove redundant if_block rule
+94d4e1b6021b kconfig: remove redundant menu_block rule
+1f31be9ec0a9 kconfig: loosen the order of "visible" and "depends on" in menu entry
+4b5ec81bfeda kconfig: rename depends_list to comment_option_list
+a01e5d242d93 kconfig: remove redundant token defines
+3c8f317d4cf1 kconfig: use distinct tokens for type and default properties
+ce2164ab5831 kconfig: refactor scanning and parsing "option" properties
+c3d228713b10 kconfig: use specific tokens instead of T_ASSIGN for assignments
+171a515d0803 kconfig: use T_WORD instead of T_VARIABLE for variables
+f5451582c4e2 kconfig: stop supporting '.' and '/' in unquoted words
+caaebb3c6de3 kconfig: refactor end token rules
+b3d1d9d3c362 kconfig: stop associating kconf_id with yylval
+824fa3b3b5e3 kconfig: switch to ASSIGN_VAL state in the second lexer
+4b31a32caf0a kconfig: update current_pos in the second lexer
+979f2b2f7936 kconfig: remove keyword lookup table entirely
+0c874100108f kconfig: convert to SPDX License Identifier
+558e78e3ce84 kconfig: split some C files out of zconf.y
+cbafbf7f551c kconfig: split the lexer out of zconf.y
+9abe42371b44 kconfig: add static qualifiers to fix gconf warnings
+3b541978562a kconfig: split images.c out of qconf.cc/gconf.c to fix gconf warnings
+f222b7f43661 kconfig: surround dbg_sym_flags with #ifdef DEBUG to fix gconf warning
+a5003571e627 kconfig: remove unused "file" field of yylval union
+1c163f4c7b3f Linux 5.0
