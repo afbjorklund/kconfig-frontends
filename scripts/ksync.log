@@ -321,3 +321,9 @@ cbafbf7f551c kconfig: split the lexer out of zconf.y
 f222b7f43661 kconfig: surround dbg_sym_flags with #ifdef DEBUG to fix gconf warning
 a5003571e627 kconfig: remove unused "file" field of yylval union
 1c163f4c7b3f Linux 5.0
+981e545a698a kconfig: rename zconf.l to lexer.l
+769a1c022678 kconfig: rename zconf.y to parser.y
+058507195b53 kbuild: move ".config not found!" message from Kconfig to Makefile
+8741908b3e29 kconfig: fix 'Save As' menu of xconfig
+9c38f1f04408 kconfig/[mn]conf: handle backspace (^H) key
+e93c9c99a629 Linux 5.1

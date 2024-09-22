@@ -11,7 +11,7 @@
 @@ -91,6 +92,7 @@
  char *xstrndup(const char *s, size_t n);
  
- /* zconf.l */
+ /* lexer.l */
 +#define yylex zconflex
  int yylex(void);
  

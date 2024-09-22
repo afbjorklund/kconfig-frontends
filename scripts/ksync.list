@@ -20,7 +20,7 @@ scripts/kconfig/lxdialog/yesno.c                  -->  libs/lxdialog/yesno.c
 scripts/kconfig/confdata.c                        -->  libs/parser/confdata.c
 scripts/kconfig/expr.c                            -->  libs/parser/expr.c
 scripts/kconfig/expr.h                            -->  libs/parser/expr.h
-scripts/kconfig/zconf.l                           -->  libs/parser/lconf.l
+scripts/kconfig/lexer.l                           -->  libs/parser/lconf.l
 scripts/kconfig/list.h                            -->  libs/parser/list.h
 scripts/kconfig/lkc.h                             -->  libs/parser/lkc.h
 scripts/kconfig/lkc_proto.h                       -->  libs/parser/lkc_proto.h
@@ -28,7 +28,7 @@ scripts/kconfig/menu.c                            -->  libs/parser/menu.c
 scripts/kconfig/preprocess.c                      -->  libs/parser/preprocess.c
 scripts/kconfig/symbol.c                          -->  libs/parser/symbol.c
 scripts/kconfig/util.c                            -->  libs/parser/util.c
-scripts/kconfig/zconf.y                           -->  libs/parser/yconf.y
+scripts/kconfig/parser.y                          -->  libs/parser/yconf.y
 scripts/config                                    -->  utils/kconfig-tweak.in
 scripts/diffconfig                                -->  utils/kconfig-diff
 scripts/kconfig/merge_config.sh                   -->  utils/kconfig-merge
