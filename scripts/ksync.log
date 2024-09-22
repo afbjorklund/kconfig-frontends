@@ -344,3 +344,6 @@ e3cd5136a4ec kconfig: remove meaningless if-conditional in conf_read()
 8e2442a5f86e kconfig: fix missing choice values in auto.conf
 0c5b6c28ed68 kconfig: Clear "written" flag to avoid data loss
 4d856f72c10e Linux 5.3
+cdfca821571d merge_config.sh: Check error codes from make
+60bef52c7a68 merge_config.sh: ignore unwanted grep errors
+219d54332a09 Linux 5.4
