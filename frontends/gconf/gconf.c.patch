@@ -1,15 +1,6 @@
 diff --git a/frontends/gconf/gconf.c b/frontends/gconf/gconf.c
 --- a/frontends/gconf/gconf.c
 +++ b/frontends/gconf/gconf.c
-@@ -12,7 +12,7 @@
- 
- #include <stdlib.h>
- #include "lkc.h"
--#include "images.c"
-+#include "images.h"
- 
- #include <glade/glade.h>
- #include <gtk/gtk.h>
 @@ -1446,7 +1446,7 @@
  {
  	const char *name;

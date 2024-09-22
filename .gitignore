@@ -16,8 +16,6 @@
 /frontends/qconf/kconfig-qconf
 /frontends/qconf/qconf.moc
 
-/libs/images/images.c
-/libs/images/images.h
 /libs/parser/lconf.c
 /libs/parser/yconf.c
 /libs/parser/kconfig-parser.pc

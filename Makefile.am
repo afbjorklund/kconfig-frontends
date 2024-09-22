@@ -134,22 +134,7 @@ if COND_images
 
 noinst_LIBRARIES += libs/images/libkconfig-images.a
 
-libs_images_libkconfig_images_a_SOURCES = libs/images/images.c_orig
-nodist_libs_images_libkconfig_images_a_SOURCES = libs/images/images.c
-
-libs/images/images.c: libs/images/images.c_orig
-	$(MKDIR_P) $(@D)
-	$(AM_V_GEN)$(SED) -e 's/^static //' $< >$@
-
-libs/images/images.h: libs/images/images.c_orig
-	$(MKDIR_P) $(@D)
-	$(AM_V_GEN)$(SED) -e '/^static \(const char \*xpm_\(.\{1,\}\)\[\]\) = {/!d; s//extern \1;/' \
-		$< >$@
-
-BUILT_SOURCES += \
-	libs/images/images.c \
-	libs/images/images.h
-CLEANFILES += \
+libs_images_libkconfig_images_a_SOURCES = \
 	libs/images/images.c \
 	libs/images/images.h
 
@@ -261,7 +246,7 @@ frontends_gconf_kconfig_gconf_CPPFLAGS = \
 	$(AM_CPPFLAGS) \
 	$(intl_CPPFLAGS) \
 	-I$(top_srcdir)/libs/parser \
-	-I$(top_builddir)/libs/images \
+	-I$(top_srcdir)/libs/images \
 	-DGUI_PATH='"$(pkgdatadir)/gconf.glade"'
 frontends_gconf_kconfig_gconf_CFLAGS = \
 	$(AM_CFLAGS) \
@@ -294,7 +279,7 @@ frontends_qconf_kconfig_qconf_CPPFLAGS = \
 	$(AM_CPPFLAGS) \
 	$(intl_CPPFLAGS) \
 	-I$(top_srcdir)/libs/parser \
-	-I$(top_builddir)/libs/images \
+	-I$(top_srcdir)/libs/images \
 	-I$(top_builddir)/frontends/qconf
 frontends_qconf_kconfig_qconf_CXXFLAGS = \
 	$(AM_CXXFLAGS) \

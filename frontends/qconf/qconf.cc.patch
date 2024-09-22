@@ -1,15 +1,6 @@
 diff --git a/frontends/qconf/qconf.cc b/frontends/qconf/qconf.cc
 --- a/frontends/qconf/qconf.cc
 +++ b/frontends/qconf/qconf.cc
-@@ -32,7 +32,7 @@
- #include "qconf.h"
- 
- #include "qconf.moc"
--#include "images.c"
-+#include "images.h"
- 
- 
- static QApplication *configApp;
 @@ -309,7 +309,7 @@
  	  showName(false), showRange(false), showData(false), mode(singleMode), optMode(normalOpt),
  	  rootEntry(0), headerPopup(0)
