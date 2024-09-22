@@ -1,6 +1,6 @@
 --- a/libs/parser/confdata.c	2023-09-17 10:11:18.144446405 +0200
 +++ b/libs/parser/confdata.c	2023-09-17 11:57:51.653521174 +0200
-@@ -1023,6 +1023,10 @@
+@@ -1079,6 +1079,10 @@
  	FILE *out, *tristate, *out_h;
  	int i;
  

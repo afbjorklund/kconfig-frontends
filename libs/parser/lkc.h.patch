@@ -8,7 +8,7 @@
  extern int yylineno;
  void zconfdump(FILE *out);
  void zconf_starthelp(void);
-@@ -91,6 +92,7 @@
+@@ -90,6 +91,7 @@
  char *xstrndup(const char *s, size_t n);
  
  /* lexer.l */

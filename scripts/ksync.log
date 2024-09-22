@@ -327,3 +327,12 @@ a5003571e627 kconfig: remove unused "file" field of yylval union
 8741908b3e29 kconfig: fix 'Save As' menu of xconfig
 9c38f1f04408 kconfig/[mn]conf: handle backspace (^H) key
 e93c9c99a629 Linux 5.1
+65be755a5411 kconfig: remove trailing whitespaces
+ceb7f3296ea1 kconfig: do not accept a directory for configuration output
+67424f61f813 kconfig: do not write .config if the content is the same
+580c5b3e1b8b kconfig: make parent directories for the saved .config as needed
+4cb726121e2c kconfig: remove useless NULL pointer check in conf_write_dep()
+b9d1a8e9302e kconfig: use snprintf for formatting pathnames
+9b9f5948afcd kconfig: make conf_get_autoconfig_name() static
+aff11cd983ec kconfig: Terminate menu blocks with a comment in the generated config
+0ecfebd2b524 Linux 5.2
