@@ -336,3 +336,11 @@ b9d1a8e9302e kconfig: use snprintf for formatting pathnames
 9b9f5948afcd kconfig: make conf_get_autoconfig_name() static
 aff11cd983ec kconfig: Terminate menu blocks with a comment in the generated config
 0ecfebd2b524 Linux 5.2
+b6f7e9f7050b kconfig: require the argument of --defconfig
+5533397d1ec8 kconfig: add static qualifier to expand_string()
+cd238effefa2 docs: kbuild: convert docs to ReST and rename to *.rst
+baa23ec86092 kconfig: Fix spelling of sym_is_changable
+e3cd5136a4ec kconfig: remove meaningless if-conditional in conf_read()
+8e2442a5f86e kconfig: fix missing choice values in auto.conf
+0c5b6c28ed68 kconfig: Clear "written" flag to avoid data loss
+4d856f72c10e Linux 5.3

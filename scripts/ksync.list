@@ -32,5 +32,5 @@ scripts/kconfig/parser.y                          -->  libs/parser/yconf.y
 scripts/config                                    -->  utils/kconfig-tweak.in
 scripts/diffconfig                                -->  utils/kconfig-diff
 scripts/kconfig/merge_config.sh                   -->  utils/kconfig-merge
-Documentation/kbuild/kconfig-language.txt         -->  docs/kconfig-language.txt
-Documentation/kbuild/kconfig.txt                  -->  docs/kconfig.txt
+Documentation/kbuild/kconfig-language.rst         -->  docs/kconfig-language.rst
+Documentation/kbuild/kconfig.rst                  -->  docs/kconfig.rst

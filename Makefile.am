@@ -21,8 +21,8 @@ BUILT_SOURCES =
 #===============================================================================
 # Docs
 dist_doc_DATA = \
-	docs/kconfig-language.txt \
-	docs/kconfig.txt
+	docs/kconfig-language.rst \
+	docs/kconfig.rst
 
 #===============================================================================
 # Libraries
