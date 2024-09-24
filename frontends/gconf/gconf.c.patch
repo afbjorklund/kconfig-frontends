@@ -1,11 +1,14 @@
 diff --git a/frontends/gconf/gconf.c b/frontends/gconf/gconf.c
 --- a/frontends/gconf/gconf.c
 +++ b/frontends/gconf/gconf.c
-@@ -1444,7 +1444,7 @@
+@@ -1443,8 +1443,10 @@
+ int main(int ac, char *av[])
  {
  	const char *name;
++#if 0
  	char *env;
 -	gchar *glade_file;
++#endif
 +	gchar *glade_file = GUI_PATH;
  
  	/* GTK stuffs */

@@ -4,6 +4,9 @@ SILENT_MAKEFLAGS_ = $(SILENT_MAKEFLAGS_$(AM_DEFAULT_VERBOSITY))
 SILENT_MAKEFLAGS_0 = --no-print-directory -s
 SILENT_MAKEFLAGS_1 =
 
+# avoid "ar u modifier ignored since D is the default (see U)"
+ARFLAGS = cr
+
 EXTRA_DIST = .version
 
 bin_PROGRAMS =
@@ -253,6 +256,7 @@ frontends_gconf_kconfig_gconf_CPPFLAGS = \
 	$(intl_CPPFLAGS) \
 	-I$(top_srcdir)/libs/parser \
 	-I$(top_srcdir)/libs/images \
+	-Wno-deprecated-declarations \
 	-DGUI_PATH='"$(pkgdatadir)/gconf.glade"'
 frontends_gconf_kconfig_gconf_CFLAGS = \
 	$(AM_CFLAGS) \

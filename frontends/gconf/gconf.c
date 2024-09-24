@@ -1443,7 +1443,9 @@ static void fixup_rootmenu(struct menu *menu)
 int main(int ac, char *av[])
 {
 	const char *name;
+#if 0
 	char *env;
+#endif
 	gchar *glade_file = GUI_PATH;
 
 	/* GTK stuffs */
