@@ -837,17 +837,15 @@ static void get_symbol_str(struct gstr *r, struct symbol *sym,
 	str_append(r, "\n\n");
 }
 
-struct gstr get_relations_str(struct symbol **sym_arr, struct list_head *head)
+void get_relations_str(struct symbol **sym_arr, struct list_head *head, struct gstr *res)
 {
 	struct symbol *sym;
-	struct gstr res = str_new();
 	int i;
 
 	for (i = 0; sym_arr && (sym = sym_arr[i]); i++)
-		get_symbol_str(&res, sym, head);
+		get_symbol_str(res, sym, head);
 	if (!i)
-		str_append(&res, "No matches found.\n");
-	return res;
+		str_append(res, "No matches found.\n");
 }
 
 

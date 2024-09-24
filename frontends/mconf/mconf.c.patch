@@ -1,0 +1,12 @@
+--- a/frontends/mconf/mconf.c	2024-09-22 09:47:27.077925132 +0200
++++ b/frontends/mconf/mconf.c	2024-09-24 20:24:17.939441597 +0200
+@@ -440,7 +440,8 @@
+ 		};
+ 		struct jump_key *pos, *tmp;
+ 
+-		res = get_relations_str(sym_arr, &head);
++		res = str_new();
++		get_relations_str(sym_arr, &head, &res);
+ 		set_subtitle();
+ 		dres = show_textbox_ext("Search Results", (char *)
+ 					str_get(&res), 0, 0, keys, &vscroll,

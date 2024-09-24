@@ -1,0 +1,23 @@
+--- a/libs/parser/menu.c	2024-09-24 20:17:45.382817714 +0200
++++ b/libs/parser/menu.c	2024-09-24 20:22:31.194195341 +0200
+@@ -837,17 +837,15 @@
+ 	str_append(r, "\n\n");
+ }
+ 
+-struct gstr get_relations_str(struct symbol **sym_arr, struct list_head *head)
++void get_relations_str(struct symbol **sym_arr, struct list_head *head, struct gstr *res)
+ {
+ 	struct symbol *sym;
+-	struct gstr res = str_new();
+ 	int i;
+ 
+ 	for (i = 0; sym_arr && (sym = sym_arr[i]); i++)
+-		get_symbol_str(&res, sym, head);
++		get_symbol_str(res, sym, head);
+ 	if (!i)
+-		str_append(&res, "No matches found.\n");
+-	return res;
++		str_append(res, "No matches found.\n");
+ }
+ 
+ 

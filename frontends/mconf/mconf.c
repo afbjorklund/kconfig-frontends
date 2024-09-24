@@ -440,7 +440,8 @@ again:
 		};
 		struct jump_key *pos, *tmp;
 
-		res = get_relations_str(sym_arr, &head);
+		res = str_new();
+		get_relations_str(sym_arr, &head, &res);
 		set_subtitle();
 		dres = show_textbox_ext("Search Results", (char *)
 					str_get(&res), 0, 0, keys, &vscroll,

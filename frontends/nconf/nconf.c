@@ -723,7 +723,8 @@ again:
 		dialog_input += strlen(CONFIG_);
 
 	sym_arr = sym_re_search(dialog_input);
-	res = get_relations_str(sym_arr, NULL);
+	res = str_new();
+	get_relations_str(sym_arr, NULL, &res);
 	free(sym_arr);
 	show_scroll_win(main_window,
 			"Search Results", str_get(&res));
@@ -754,7 +755,6 @@ static void build_conf(struct menu *menu)
 			switch (ptype) {
 			case P_MENU:
 				child_count++;
-				prompt = prompt;
 				if (single_menu_mode) {
 					item_make(menu, 'm',
 						"%s%*c%s",
