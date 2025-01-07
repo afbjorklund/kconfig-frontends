@@ -448,3 +448,14 @@ f3eea294e93f kconfig: qconf: remove ConfigLineEdit class
 a0fce283386d kconfig: qconf: remove Y, M, N columns
 f9a825a7f65a kconfig: qconf: create QApplication after option checks
 2c85ebc57b3e Linux 5.10
+c25ce589dca1 tweewide: Fix most Shebang lines
+a2574c12df0d kconfig: qconf: convert to Qt5 new signal/slot connection syntax
+98ebea7ba891 kconfig: make lkc.h self-sufficient #include-wise
+f463269fb940 kconfig: qconf: show Qt version in the About dialog
+78cb09078352 kconfig: clean up header inclusion
+c613583b6a87 Documentation/kbuild: Document COMPILE_TEST dependencies
+18084e435ff6 Documentation/kbuild: Document platform dependency practises
+135b4957eac4 kconfig: fix return value of do_error_if()
+d39648eb67ac kconfig: config script: add a little user help
+51839e29cb59 scripts: switch explicitly to Python 3
+f40ddce88593 Linux 5.11

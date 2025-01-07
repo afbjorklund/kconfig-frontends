@@ -1,6 +1,6 @@
 --- a/libs/parser/lkc.h	2024-09-21 18:32:55.939528260 +0200
 +++ b/libs/parser/lkc.h	2024-09-22 08:52:16.911917804 +0200
-@@ -40,6 +40,7 @@
+@@ -44,6 +44,7 @@
  	def_random
  };
  
@@ -8,7 +8,7 @@
  extern int yylineno;
  void zconfdump(FILE *out);
  void zconf_starthelp(void);
-@@ -75,6 +76,7 @@
+@@ -79,6 +80,7 @@
  char *xstrndup(const char *s, size_t n);
  
  /* lexer.l */
@@ -16,7 +16,7 @@
  int yylex(void);
  
  struct gstr {
-@@ -119,7 +121,7 @@
+@@ -123,7 +125,7 @@
  struct menu *menu_get_parent_menu(struct menu *menu);
  bool menu_has_help(struct menu *menu);
  const char *menu_get_help(struct menu *menu);

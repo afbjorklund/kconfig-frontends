@@ -1,7 +1,7 @@
 --- a/libs/parser/lconf.l	2024-09-21 18:32:55.943528526 +0200
 +++ b/libs/parser/lconf.l	2024-09-21 20:17:23.083460252 +0200
-@@ -15,7 +15,7 @@
- #include <unistd.h>
+@@ -14,7 +14,7 @@
+ #include <string.h>
  
  #include "lkc.h"
 -#include "parser.tab.h"
