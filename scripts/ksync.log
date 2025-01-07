@@ -436,3 +436,15 @@ a608b6a646e8 kconfig: qconf: use delete[] instead of delete to free array (again
 19b835a5db93 kconfig: qconf: fix incomplete type 'struct gstr' warning
 a46afd114147 kconfig: qconf: revive help message in the info view
 bbf5c979011a Linux 5.9
+8c30e7e60d43 kconfig: qconf: reformat the intro message
+1fb752416f3f kconfig: qconf: update the intro message to match to the current code
+6a143041532e kconfig: qconf: remove unused ConfigItem::okRename()
+f9b918fae678 kconfig: qconf: move ConfigView::updateList(All) to ConfigList class
+669a1ee46a0e kconfig: qconf: show data column all the time
+37162a68bf51 kconfig: qconf: allow to edit "int", "hex", "string" menus in-place
+f3eea294e93f kconfig: qconf: remove ConfigLineEdit class
+7930dd91a01f kconfig: qconf: move setShowName/Range() to ConfigList from ConfigView
+62ed165651cc kconfig: qconf: remove ConfigView class
+a0fce283386d kconfig: qconf: remove Y, M, N columns
+f9a825a7f65a kconfig: qconf: create QApplication after option checks
+2c85ebc57b3e Linux 5.10
