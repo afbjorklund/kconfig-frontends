@@ -36,13 +36,12 @@ libs_parser_libkconfig_parser_la_SOURCES += \
 	libs/parser/lconf.l \
 	libs/parser/confdata.c \
 	libs/parser/expr.c \
+	libs/parser/menu.c \
 	libs/parser/preprocess.c \
 	libs/parser/symbol.c \
 	libs/parser/util.c \
 	#
 dist_EXTRA_libs_parser_libkconfig_parser_la_SOURCES = \
-	libs/parser/util.c \
-	libs/parser/menu.c \
 	libs/parser/expr.h \
 	libs/parser/lkc.h \
 	libs/parser/lkc_proto.h
