@@ -498,3 +498,5 @@ ed63ef779697 kconfig: gconf: remove unused code
 62fb9874f5da Linux 5.13
 43ac711053fc kconfig: constify long_opts
 7d2a07b76933 Linux 5.14
+a325db2d8f1d scripts: merge_config: add strict mode to fail upon any redefinition
+8bb7eca972ad Linux 5.15
