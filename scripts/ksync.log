@@ -370,3 +370,14 @@ ba82f52e2287 kconfig: fix an "implicit declaration of function" warning
 c8fb7d7e48d1 kconfig: fix broken dependency in randconfig-generated .config
 089b7d890f97 kconfig: Invalidate all symbols after changing to y or m.
 7111951b8d49 Linux 5.6
+def2fbffe62c kconfig: allow symbols implied by y to become m
+3a9dd3ecb207 kconfig: make 'imply' obey the direct dependency
+dbd35860122b kconfig: remove unused variable in qconf.cc
+cf497b922386 kconfig: qconf: clean deprecated warnings
+5752ff07fd90 kconfig: qconf: Change title for the item window
+cce1faba8264 kconfig: qconf: fix the content of the main widget
+b311142fcfd3 kconfig: qconf: fix support for the split view mode
+e1f7769f6094 kconfig: qconf: remove some old bogus TODOs
+60969f02f07a kconfig: qconf: Fix a few alignment issues
+e461bc9f9ab1 scripts/config: allow colons in option strings for sed
+3d77e6a8804a Linux 5.7

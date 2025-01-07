@@ -10,9 +10,9 @@ diff --git a/utils/kconfig-tweak.in b/utils/kconfig-tweak.in
 +# If no prefix forced, use the default @CONFIG_@
 +CONFIG_="${CONFIG_-@CONFIG_@}"
  
- usage() {
- 	cat >&2 <<EOL
-@@ -42,7 +42,7 @@
+ # We use an uncommon delimiter for sed substitutions
+ SED_DELIM=$(echo -en "\001")
+@@ -45,7 +45,7 @@
  By default, $myname will upper-case the given symbol. Use --keep-case to keep
  the case of all following symbols unchanged.
  
