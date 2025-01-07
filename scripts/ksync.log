@@ -496,3 +496,5 @@ ed63ef779697 kconfig: gconf: remove unused code
 92f8a9217a12 kconfig: highlight xconfig 'comment' lines with '***'
 0e0345b77ac4 kbuild: redo fake deps at include/config/*.h
 62fb9874f5da Linux 5.13
+43ac711053fc kconfig: constify long_opts
+7d2a07b76933 Linux 5.14
