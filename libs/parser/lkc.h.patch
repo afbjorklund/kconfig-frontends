@@ -1,6 +1,6 @@
 --- a/libs/parser/lkc.h	2024-09-21 18:32:55.939528260 +0200
 +++ b/libs/parser/lkc.h	2024-09-22 08:52:16.911917804 +0200
-@@ -38,6 +38,7 @@
+@@ -40,6 +40,7 @@
  	def_random
  };
  
@@ -8,7 +8,7 @@
  extern int yylineno;
  void zconfdump(FILE *out);
  void zconf_starthelp(void);
-@@ -89,6 +90,7 @@
+@@ -92,6 +93,7 @@
  char *xstrndup(const char *s, size_t n);
  
  /* lexer.l */

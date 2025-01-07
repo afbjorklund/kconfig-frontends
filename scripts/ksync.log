@@ -352,3 +352,21 @@ cdfca821571d merge_config.sh: Check error codes from make
 272a72103012 kconfig: don't crash on NULL expressions in expr_eq()
 8f268881d7d2 kconfig: remove ---help--- from documentation
 d5226fa6dbae Linux 5.5
+8b41fc4454e3 kbuild: create modules.builtin without Makefile.modbuiltin or tristate.conf
+f64048a20b0c kconfig: remove the rootmenu check in menu_add_prop()
+de026ca9152c kconfig: use parent->dep as the parentdep of 'menu'
+801b27db4638 kconfig: drop T_WORD from the RHS of 'prompt' symbol
+1be6e791383a kconfig: remove 'prompt' symbol
+024352ff8d69 kconfig: move prompt handling to menu_add_prompt() from menu_add_prop()
+2ffeef615b5e kconfig: remove 'prompt' argument from menu_add_prop()
+6397d96ba5a5 kconfig: remove sym from struct property
+adf7c5bd0674 kconfig: squash prop_alloc() into menu_add_prop()
+89b9060987d9 kconfig: Add yes2modconfig and mod2yesconfig targets.
+edda15f21974 kconfig: list all definitions of a symbol in help text
+3460d0bc256a kconfig: distinguish between dependencies and visibility in help text
+a9609686042b kconfig: fix nesting of symbol help text
+ba82f52e2287 kconfig: fix an "implicit declaration of function" warning
+2b5072b9dfab kconfig: fix documentation typos
+c8fb7d7e48d1 kconfig: fix broken dependency in randconfig-generated .config
+089b7d890f97 kconfig: Invalidate all symbols after changing to y or m.
+7111951b8d49 Linux 5.6

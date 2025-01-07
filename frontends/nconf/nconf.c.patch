@@ -1,6 +1,6 @@
 --- a/frontends/nconf/nconf.c	2024-09-22 09:47:27.077925132 +0200
 +++ b/frontends/nconf/nconf.c	2024-09-24 20:06:50.334603758 +0200
-@@ -723,7 +723,8 @@
+@@ -724,7 +724,8 @@
  		dialog_input += strlen(CONFIG_);
  
  	sym_arr = sym_re_search(dialog_input);
@@ -10,7 +10,7 @@
  	free(sym_arr);
  	show_scroll_win(main_window,
  			"Search Results", str_get(&res));
-@@ -754,7 +754,6 @@
+@@ -755,7 +755,6 @@
  			switch (ptype) {
  			case P_MENU:
  				child_count++;
