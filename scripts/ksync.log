@@ -459,3 +459,9 @@ c613583b6a87 Documentation/kbuild: Document COMPILE_TEST dependencies
 d39648eb67ac kconfig: config script: add a little user help
 51839e29cb59 scripts: switch explicitly to Python 3
 f40ddce88593 Linux 5.11
+f82bd80d37ec kconfig: Remove duplicate call to sym_get_string_value()
+a4cff327d853 kconfig: clean up nested if-conditionals in check_conf()
+102a1a72d0c8 kconfig: remove dead code in conf_askvalue()
+a2af62c3bd8f kconfig: fix 'invalid option' for help option
+ae8da72bde7a kconfig: omit --oldaskconfig option for 'make config'
+9f4ad9e425a1 Linux 5.12
