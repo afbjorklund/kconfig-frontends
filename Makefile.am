@@ -43,6 +43,7 @@ libs_parser_libkconfig_parser_la_SOURCES += \
 	#
 dist_EXTRA_libs_parser_libkconfig_parser_la_SOURCES = \
 	libs/parser/expr.h \
+	libs/parser/internal.h \
 	libs/parser/lkc.h \
 	libs/parser/lkc_proto.h
 libs_parser_libkconfig_parser_la_CPPFLAGS = \
