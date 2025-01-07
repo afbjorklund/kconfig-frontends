@@ -1,6 +1,6 @@
 --- a/frontends/mconf/mconf.c	2024-09-22 09:47:27.077925132 +0200
 +++ b/frontends/mconf/mconf.c	2024-09-24 20:24:17.939441597 +0200
-@@ -441,7 +441,8 @@
+@@ -438,7 +438,8 @@
  		};
  		struct jump_key *pos, *tmp;
  

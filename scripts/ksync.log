@@ -465,3 +465,34 @@ a4cff327d853 kconfig: clean up nested if-conditionals in check_conf()
 a2af62c3bd8f kconfig: fix 'invalid option' for help option
 ae8da72bde7a kconfig: omit --oldaskconfig option for 'make config'
 9f4ad9e425a1 Linux 5.12
+89145649b0d0 kconfig: split randconfig setup code into set_randconfig_seed()
+ed562c53104f kconfig: refactor option parse code
+bafc47913216 kconfig: add long options --help and --silent
+ee4c6f00dcee kconfig: add help messages for --help (-h) and --silent (-s)
+9a3c3bc820be kconfig: remove assignment for Kconfig file
+15e68d09458f kconfig: move conf_rewrite_mod_or_yes() to conf.c
+98f8475c7869 kconfig: move conf_set_all_new_symbols() to conf.c
+406616213bb7 kconfig: move JUMP_NB to mconf.c
+b75b0a819af9 kconfig: change defconfig_list option to environment variable
+ab838577aaae kconfig: remove allnoconfig_y option
+6dd85ff178cd kconfig: change "modules" from sub-option to first-level attribute
+a69b191f6297 kconfig: use true and false for bool variable
+bffbf6e2ad6a kconfig: lxdialog: A spello fix and a punctuation added
+1f035a52918a kconfig: nconf: fix core dump when searching in empty menu
+5ee546594025 kconfig: change sym_change_count to a boolean flag
+68876c38c4b3 kconfig: mconf,nconf: remove unneeded '\0' termination after snprintf()
+7f5ff55bf8eb kconfig: nconf: fix NORMAL attributes
+2ba50da9ec34 kconfig: nconf: get rid of (void) casts from wattrset() calls
+16b0e10238b4 kconfig: nconf: remove unneeded default for menu prompt
+93487b17b147 kconfig: nconf: refactor attributes setup code
+ecdb733f8fa8 kconfig: nconf: change set_config_filename() to void function
+0a94768cfda6 kconfig: nconf: remove meaningless wattrset() call from show_menu()
+08718745d861 kconfig: nconf: refactor in print_in_middle()
+a77a05dc9cf2 kconfig: split menu.c out of parser.y
+8c94b430b9f6 kconfig: nconf: stop endless search loops
+989e5d4b576f kconfig: remove unused PACKAGE definition
+ed63ef779697 kconfig: gconf: remove unused code
+5fb35ec10bb0 kconfig: highlight gconfig 'comment' lines with '***'
+92f8a9217a12 kconfig: highlight xconfig 'comment' lines with '***'
+0e0345b77ac4 kbuild: redo fake deps at include/config/*.h
+62fb9874f5da Linux 5.13

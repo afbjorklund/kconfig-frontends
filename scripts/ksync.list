@@ -29,6 +29,7 @@ scripts/kconfig/preprocess.c                      -->  libs/parser/preprocess.c
 scripts/kconfig/symbol.c                          -->  libs/parser/symbol.c
 scripts/kconfig/util.c                            -->  libs/parser/util.c
 scripts/kconfig/parser.y                          -->  libs/parser/yconf.y
+scripts/kconfig/internal.h                        -->  libs/parser/internal.h
 scripts/config                                    -->  utils/kconfig-tweak.in
 scripts/diffconfig                                -->  utils/kconfig-diff
 scripts/kconfig/merge_config.sh                   -->  utils/kconfig-merge

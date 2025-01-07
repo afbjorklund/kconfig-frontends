@@ -1,6 +1,6 @@
 --- a/frontends/nconf/nconf.c	2024-09-22 09:47:27.077925132 +0200
 +++ b/frontends/nconf/nconf.c	2024-09-24 20:06:50.334603758 +0200
-@@ -724,7 +724,8 @@
+@@ -721,7 +721,8 @@
  		dialog_input += strlen(CONFIG_);
  
  	sym_arr = sym_re_search(dialog_input);

@@ -1,14 +1,14 @@
 --- a/libs/parser/lkc.h	2024-09-21 18:32:55.939528260 +0200
 +++ b/libs/parser/lkc.h	2024-09-22 08:52:16.911917804 +0200
-@@ -44,6 +44,7 @@
- 	def_random
- };
+@@ -30,6 +30,7 @@
+ #undef CONFIG_
+ #define CONFIG_ CONFIG_prefix()
  
 +#define yylineno zconflineno
  extern int yylineno;
  void zconfdump(FILE *out);
  void zconf_starthelp(void);
-@@ -79,6 +80,7 @@
+@@ -61,6 +62,7 @@
  char *xstrndup(const char *s, size_t n);
  
  /* lexer.l */
@@ -16,7 +16,7 @@
  int yylex(void);
  
  struct gstr {
-@@ -123,7 +125,7 @@
+@@ -102,7 +104,7 @@
  struct menu *menu_get_parent_menu(struct menu *menu);
  bool menu_has_help(struct menu *menu);
  const char *menu_get_help(struct menu *menu);
