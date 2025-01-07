@@ -347,3 +347,8 @@ e3cd5136a4ec kconfig: remove meaningless if-conditional in conf_read()
 cdfca821571d merge_config.sh: Check error codes from make
 60bef52c7a68 merge_config.sh: ignore unwanted grep errors
 219d54332a09 Linux 5.4
+521b29b6ff53 kconfig: split util.c out of parser.y
+5d8b42aa7ccb kconfig: Add option to get the full help text with listnewconfig
+272a72103012 kconfig: don't crash on NULL expressions in expr_eq()
+8f268881d7d2 kconfig: remove ---help--- from documentation
+d5226fa6dbae Linux 5.5
