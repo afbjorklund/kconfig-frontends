@@ -10,11 +10,3 @@
  	free(sym_arr);
  	show_scroll_win(main_window,
  			"Search Results", str_get(&res));
-@@ -755,7 +755,6 @@
- 			switch (ptype) {
- 			case P_MENU:
- 				child_count++;
--				prompt = prompt;
- 				if (single_menu_mode) {
- 					item_make(menu, 'm',
- 						"%s%*c%s",
