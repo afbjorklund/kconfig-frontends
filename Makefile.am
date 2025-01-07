@@ -284,8 +284,9 @@ bin_PROGRAMS += frontends/qconf/kconfig-qconf
 
 frontends_qconf_kconfig_qconf_SOURCES = \
 	frontends/qconf/qconf.cc \
+	frontends/qconf/qconf-moc.cc \
 	frontends/qconf/qconf.h
-BUILT_SOURCES += frontends/qconf/qconf.moc
+BUILT_SOURCES += frontends/qconf/qconf-moc.cc
 frontends_qconf_kconfig_qconf_CPPFLAGS = \
 	$(AM_CPPFLAGS) \
 	$(intl_CPPFLAGS) \
@@ -307,10 +308,10 @@ AM_V_MOC_ = $(AM_V_MOC_$(AM_DEFAULT_VERBOSITY))
 AM_V_MOC_0 = @echo "  MOC     " $@;
 AM_V_MOC_1 =
 
-.h.moc:
-	$(AM_V_MOC)$(MOC) -i $< -o $@
+frontends/qconf/qconf-moc.cc: frontends/qconf/qconf.h
+	$(AM_V_MOC)$(MOC) $< -o $@
 
-CLEANFILES += frontends/qconf/qconf.moc
+CLEANFILES += frontends/qconf/qconf-moc.cc
 
 endif # COND_qconf
 

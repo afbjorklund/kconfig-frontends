@@ -14,7 +14,7 @@
 /frontends/mconf/kconfig-mconf
 /frontends/nconf/kconfig-nconf
 /frontends/qconf/kconfig-qconf
-/frontends/qconf/qconf.moc
+/frontends/qconf/qconf-moc.cc
 
 /libs/parser/lconf.h
 /libs/parser/lconf.c
