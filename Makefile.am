@@ -311,7 +311,6 @@ AM_V_MOC_1 =
 	$(AM_V_MOC)$(MOC) -i $< -o $@
 
 CLEANFILES += frontends/qconf/qconf.moc
-EXTRA_DIST += frontends/qconf/qconf.cc.patch
 
 endif # COND_qconf
 
